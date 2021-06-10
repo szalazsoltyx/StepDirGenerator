@@ -99,10 +99,11 @@ def vezerles_sima(Step=1, Freqency=0.5, Cycle=1):
     for n in range(Cycle):
         for i in range(Step):
             led_stepp(0)
-            time.sleep(Freqency)
+            time.sleep(Freqency/60)
             led_stepp(1)
-            time.sleep(Freqency)
+            time.sleep(Freqency/60)
         #led_stepp(0)
+        time.sleep(0.1) #Step dir eltolás
         ledstatus = not ledstatus
         led_dir(ledstatus)
     led_stepp(0)
