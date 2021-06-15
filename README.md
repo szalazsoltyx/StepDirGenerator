@@ -1,21 +1,18 @@
-python tools/pyboard.py --device /dev/ttyUSB0 -f cp ssd1306.py :
-python tools/pyboard.py --device /dev/ttyUSB0 test.py
+Step Dir controller width ESP8266
 
-screen /dev/ttyUSB0 115200
+Writed in micropython.
+
+used parts:
+
+WEMOS-D1-MINI 4M (WEMOS-D1-MINI)
+WEMOS-CHG
+KXD 383450PL M (LiPo) 
+D091-12832-I2C/BL (Oled, i2c)
+ROT-1AB (Encoder)
+
+used libs:
+https://github.com/MikeTeachman/micropython-rotary
+https://github.com/micropython/micropython/blob/master/drivers/display/ssd1306.py
 
 
-cp libs/* /pyboard/
-
-
-
-rshell --buffer-size=30 -p /dev/ttyUSB0 -a
-
-
- d4 () Core 2
- d0 16
- d8 15
-
-
-Freqency Mondjuk milisec be. = 1000 ms,  100 ms, 10 ms, 1 ms, 0,1 ms, 0,01 ms.              val_new = 10 ** r.value() /100
-Step Egy kibekapcsolási ciklust hányszor csináljon meg. = 1, 10, 100, 1000, 10 000, 100 000. 
-Cycle = 1, 10, 100, 1000.                               val_new = 10 ** r.value() #hatvanyozas
+3D Printable box created in FrreCad
